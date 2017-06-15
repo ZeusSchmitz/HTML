@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Bilioteca2">
+  <ClassDiagramComponents>
+    <Class name="Aluno" package="bilioteca2.pkg0" visibility="public" xPosition="5.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="curso"/>
+          <Argument type="String" name="matricula"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCurso" returnType="String" visibility="public"/>
+        <Method name="setCurso" returnType="void" visibility="public">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Biblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="1916.0" yPosition="1193.0">
+      <Fields>
+        <Field name="empDao" type="EmprestimoDAO" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="efetuaEmprestimo" returnType="void" visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+          <Argument type="Aluno" name="nomeAluno"/>
+        </Method>
+        <Method name="devolverEmprestimo" returnType="void" visibility="public">
+          <Argument type="int" name="codigoBarras"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Emprestimo" package="bilioteca2.pkg0" visibility="public" xPosition="953.0" yPosition="61.0">
+      <Fields>
+        <Field name="codigoBarras" type="Livro" visibility="private"/>
+        <Field name="nomeAluno" type="Aluno" visibility="private"/>
+        <Field name="diaEmpr" type="String" visibility="private"/>
+        <Field name="diaEntrg" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+          <Argument type="Aluno" name="nomeAluno"/>
+          <Argument type="String" name="diaEmpr"/>
+          <Argument type="String" name="diaEntrg"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNomeAluno" returnType="Aluno" visibility="public"/>
+        <Method name="setNomeAluno" returnType="void" visibility="public">
+          <Argument type="Aluno" name="nomeAluno"/>
+        </Method>
+        <Method name="getDiaEmpr" returnType="String" visibility="public"/>
+        <Method name="setDiaEmpr" returnType="void" visibility="public">
+          <Argument type="String" name="diaEmpr"/>
+        </Method>
+        <Method name="getDiaEntrg" returnType="String" visibility="public"/>
+        <Method name="setDiaEntrg" returnType="void" visibility="public">
+          <Argument type="String" name="diaEntrg"/>
+        </Method>
+        <Method name="getCodigoBarras" returnType="Livro" visibility="public"/>
+        <Method name="setCodigoBarras" returnType="void" visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Livro" package="bilioteca2.pkg0" visibility="public" xPosition="543.0" yPosition="681.0">
+      <Fields>
+        <Field name="codigoDeBarras" type="int" visibility="private"/>
+        <Field name="idLivro" type="int" visibility="private"/>
+        <Field name="exemplar" type="int" visibility="private"/>
+        <Field name="dataAquisicaoExemplar" type="String" visibility="private"/>
+        <Field name="dataCadastroSistema" type="String" visibility="private"/>
+        <Field name="Classificacao" type="String" visibility="private"/>
+        <Field name="areaConhecimento" type="String" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="ano" type="String" visibility="private"/>
+        <Field name="isbn" type="String" visibility="private"/>
+        <Field name="editora" type="String" visibility="private"/>
+        <Field name="paginas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigoDeBarras"/>
+          <Argument type="int" name="idLivro"/>
+          <Argument type="int" name="exemplar"/>
+          <Argument type="String" name="dataAquisicaoExemplar"/>
+          <Argument type="String" name="dataCadastroSistema"/>
+          <Argument type="String" name="Classificacao"/>
+          <Argument type="String" name="areaConhecimento"/>
+          <Argument type="String" name="autor"/>
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="ano"/>
+          <Argument type="String" name="isbn"/>
+          <Argument type="String" name="editora"/>
+          <Argument type="int" name="paginas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getCodigoDeBarras" returnType="int" visibility="public"/>
+        <Method name="setCodigoDeBarras" returnType="void" visibility="public">
+          <Argument type="int" name="codigoDeBarras"/>
+        </Method>
+        <Method name="getIdLivro" returnType="int" visibility="public"/>
+        <Method name="setIdLivro" returnType="void" visibility="public">
+          <Argument type="int" name="idLivro"/>
+        </Method>
+        <Method name="getExemplar" returnType="int" visibility="public"/>
+        <Method name="setExemplar" returnType="void" visibility="public">
+          <Argument type="int" name="exemplar"/>
+        </Method>
+        <Method name="getDataAquisicaoExemplar" returnType="String" visibility="public"/>
+        <Method name="setDataAquisicaoExemplar" returnType="void" visibility="public">
+          <Argument type="String" name="dataAquisicaoExemplar"/>
+        </Method>
+        <Method name="getDataCadastroSistema" returnType="String" visibility="public"/>
+        <Method name="setDataCadastroSistema" returnType="void" visibility="public">
+          <Argument type="String" name="dataCadastroSistema"/>
+        </Method>
+        <Method name="getClassificacao" returnType="String" visibility="public"/>
+        <Method name="setClassificacao" returnType="void" visibility="public">
+          <Argument type="String" name="Classificacao"/>
+        </Method>
+        <Method name="getAreaConhecimento" returnType="String" visibility="public"/>
+        <Method name="setAreaConhecimento" returnType="void" visibility="public">
+          <Argument type="String" name="areaConhecimento"/>
+        </Method>
+        <Method name="getAutor" returnType="String" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public">
+          <Argument type="String" name="autor"/>
+        </Method>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getAno" returnType="String" visibility="public"/>
+        <Method name="setAno" returnType="void" visibility="public">
+          <Argument type="String" name="ano"/>
+        </Method>
+        <Method name="getIsbn" returnType="String" visibility="public"/>
+        <Method name="setIsbn" returnType="void" visibility="public">
+          <Argument type="String" name="isbn"/>
+        </Method>
+        <Method name="getEditora" returnType="String" visibility="public"/>
+        <Method name="setEditora" returnType="void" visibility="public">
+          <Argument type="String" name="editora"/>
+        </Method>
+        <Method name="getPaginas" returnType="int" visibility="public"/>
+        <Method name="setPaginas" returnType="void" visibility="public">
+          <Argument type="int" name="paginas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestaBiblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="2074.0" yPosition="194.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AlunoDAO" package="dao" visibility="public" xPosition="368.0" yPosition="338.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="buscaAluno" returnType="Aluno" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="Gravar_aluno" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, Aluno&gt;" name="lista"/>
+        </Method>
+        <Method name="Ler_Aluno" returnType="HashMap&lt;String, Aluno&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LivroDAO" package="dao.bin" visibility="public" xPosition="1939.0" yPosition="30.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="importa_livros" returnType="void" visibility="public"/>
+        <Method name="saveAllLivrosBIN" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;Integer, Livro&gt;" name="livros"/>
+        </Method>
+        <Method name="lerBIN" returnType="HashMap&lt;String, Livro&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EmprestimoDAO" package="dao" visibility="public" xPosition="1899.0" yPosition="688.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="verificaEmprestimo" returnType="void" visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+          <Argument type="Aluno" name="nomeAluno"/>
+        </Method>
+        <Method name="Gravar_Emprestimo" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;Integer, Emprestimo&gt;" name="lista"/>
+        </Method>
+        <Method name="Ler_Emprestimo" returnType="HashMap&lt;Integer, Emprestimo&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LivroDAO" package="dao.xml" visibility="public" xPosition="28.0" yPosition="1032.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="verifica_livro" returnType="void" visibility="public">
+          <Argument type="Livro" name="codigoBarras"/>
+          <Argument type="Aluno" name="nomeAluno"/>
+        </Method>
+        <Method name="importa_livros" returnType="void" visibility="public"/>
+        <Method name="saveAllLivrosXML" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;Integer, Livro&gt;" name="livros"/>
+        </Method>
+        <Method name="lerLivros" returnType="HashMap&lt;Integer, Livro&gt;" visibility="public"/>
+        <Method name="buscaLivroCodigo" returnType="Livro" visibility="public">
+          <Argument type="int" name="codigoBarras"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DaoDataException" package="excecoes" visibility="public" xPosition="5.0" yPosition="338.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensagem"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="MigraCSVparaBIN" package="migracao" visibility="public" xPosition="5.0" yPosition="469.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MigraCSVparaXML" package="migracao" visibility="public" xPosition="5.0" yPosition="856.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestaAluno" package="tetes" visibility="public" xPosition="5.0" yPosition="726.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestaEmprestimo" package="tetes" visibility="public" xPosition="5.0" yPosition="594.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="dao.EmprestimoDAO" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="codigoBarras" source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Livro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.xml.LivroDAO" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="bilioteca2.pkg0.Biblioteca" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="empDao" source="bilioteca2.pkg0.Biblioteca" target="dao.EmprestimoDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nomeAluno" source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.AlunoDAO" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.EmprestimoDAO" target="bilioteca2.pkg0.Emprestimo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

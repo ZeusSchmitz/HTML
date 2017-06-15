@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Bilioteca2">
   <ClassDiagramComponents>
-    <Class name="Aluno" package="bilioteca2.pkg0" visibility="public" xPosition="5.0" yPosition="20.0">
+    <Class name="Aluno" package="bilioteca2.pkg0" visibility="public" xPosition="417.0" yPosition="109.0">
       <Fields>
         <Field name="nome" type="String" visibility="private"/>
       </Fields>
@@ -30,7 +30,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Biblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="1916.0" yPosition="1193.0">
+    <Class name="Biblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="1939.0" yPosition="1051.0">
       <Fields>
         <Field name="empDao" type="EmprestimoDAO" visibility="package"/>
       </Fields>
@@ -173,7 +173,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="TestaBiblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="2074.0" yPosition="194.0">
+    <Class name="TestaBiblioteca" package="bilioteca2.pkg0" visibility="public" xPosition="94.0" yPosition="899.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -182,7 +182,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="AlunoDAO" package="dao" visibility="public" xPosition="368.0" yPosition="338.0">
+    <Class name="AlunoDAO" package="dao" visibility="public" xPosition="418.0" yPosition="469.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -195,7 +195,7 @@
         <Method name="Ler_Aluno" returnType="HashMap&lt;String, Aluno&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="LivroDAO" package="dao.bin" visibility="public" xPosition="1939.0" yPosition="30.0">
+    <Class name="LivroDAO" package="dao.bin" visibility="public" xPosition="89.0" yPosition="740.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -206,7 +206,7 @@
         <Method name="lerBIN" returnType="HashMap&lt;String, Livro&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="EmprestimoDAO" package="dao" visibility="public" xPosition="1899.0" yPosition="688.0">
+    <Class name="EmprestimoDAO" package="dao" visibility="public" xPosition="1750.0" yPosition="175.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -220,7 +220,7 @@
         <Method name="Ler_Emprestimo" returnType="HashMap&lt;Integer, Emprestimo&gt;" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="LivroDAO" package="dao.xml" visibility="public" xPosition="28.0" yPosition="1032.0">
+    <Class name="LivroDAO" package="dao.xml" visibility="public" xPosition="94.0" yPosition="1032.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -238,7 +238,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="DaoDataException" package="excecoes" visibility="public" xPosition="5.0" yPosition="338.0">
+    <Class name="DaoDataException" package="excecoes" visibility="public" xPosition="94.0" yPosition="61.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -248,7 +248,7 @@
       </Constructors>
       <Methods/>
     </Class>
-    <Class name="MigraCSVparaBIN" package="migracao" visibility="public" xPosition="5.0" yPosition="469.0">
+    <Class name="MigraCSVparaBIN" package="migracao" visibility="public" xPosition="94.0" yPosition="212.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -257,7 +257,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="MigraCSVparaXML" package="migracao" visibility="public" xPosition="5.0" yPosition="856.0">
+    <Class name="MigraCSVparaXML" package="migracao" visibility="public" xPosition="94.0" yPosition="609.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -266,7 +266,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="TestaAluno" package="tetes" visibility="public" xPosition="5.0" yPosition="726.0">
+    <Class name="TestaAluno" package="tetes" visibility="public" xPosition="94.0" yPosition="469.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -275,7 +275,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="TestaEmprestimo" package="tetes" visibility="public" xPosition="5.0" yPosition="594.0">
+    <Class name="TestaEmprestimo" package="tetes" visibility="public" xPosition="94.0" yPosition="347.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -286,15 +286,15 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
+    <HasRelation name="nomeAluno" source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.xml.LivroDAO" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.EmprestimoDAO" target="bilioteca2.pkg0.Emprestimo" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="dao.EmprestimoDAO" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="codigoBarras" source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Livro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="dao.xml.LivroDAO" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dao.AlunoDAO" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="bilioteca2.pkg0.Biblioteca" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="empDao" source="bilioteca2.pkg0.Biblioteca" target="dao.EmprestimoDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="nomeAluno" source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Aluno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="dao.AlunoDAO" target="bilioteca2.pkg0.Aluno" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="dao.EmprestimoDAO" target="bilioteca2.pkg0.Emprestimo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="bilioteca2.pkg0.Emprestimo" target="bilioteca2.pkg0.Livro" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

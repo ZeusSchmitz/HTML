@@ -47,7 +47,7 @@ public class ArvoreBinariaBusca
 
   public void insere(int v)
   {
-    insereAux(raiz, v);
+    raiz = insereAux(raiz, v);
   }
 
   private NoArvoreBinaria insereAux(NoArvoreBinaria no, int v)
